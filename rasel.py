@@ -217,9 +217,7 @@ def menu():
 
 
 
-def fil():
-    os.system('clear');
-    D().plerr()
+
 class D:
 	def __init__(self):
 		self.id = []
