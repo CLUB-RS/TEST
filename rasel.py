@@ -212,7 +212,7 @@ def menu():
 	me=input(f'\033[1;31m[\033[1;32m?\033[1;31m]\033[1;32m Choice : ')
 	if me in ["1", "01"]:
 		fil()
-	elif me in ["2", "02"]:
+	if me in ["2", "02"]:
 	
 
 
