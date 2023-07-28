@@ -1,9 +1,3 @@
-# -----------------[ ANONYMOUS  CYBER ]-------------------#
-#GIFT FOR EDUCATIONAL PURPOSE 
-#TG CHNNAL :  https://t.me/ANONYMOUS_CYBER07
-#OWNER : U7P4L 1N
-#TEAM : ANONYMOUS CYBER
-# -----------------[ ANONYMOUS  CYBER ]-------------------#
 import os,sys,time,json,random,re,string,platform,base64,uuid
 os.system("git pull")
 from bs4 import BeautifulSoup as sop
@@ -103,7 +97,7 @@ logo = ("""
 \033[34;1m/_/  /_/_/ |_|     /_/ |_/_/  |_/____/_____/_____/
                                                            
 \033[1;31m[\033[1;32m+\033[1;31m]\033[1;93m═════════════════════════════════════════════════\033[1;31m[\033[1;32m+\033[1;31m]
-     \033[1;31m[\033[1;32m•\033[1;31m]\33[1;32m CREATED BY\33[0;m   : RASEL AHAMMED  \033[1;96m 
+     \033[1;31m[\033[1;32m•\033[1;31m]\33[1;32m CREATED BY\33[0;m   :  \033[1;96m 
      \033[1;31m[\033[1;32m•\033[1;31m]\33[1;32m FACEBOK      : RASEL AHAMMED \033[1;34m 
      \033[1;31m[\033[1;32m•\033[1;31m]\33[1;32m GITHUB       : CLUB-RS  \033[1;35m      
      \033[1;31m[\033[1;32m•\033[1;31m]\33[1;32m TOOL STATUS  : TEST \033[1;36m    
@@ -309,7 +303,7 @@ def rcrack(uid,pwx,tl):
             else:
                 continue
         loop+=1
-        sys.stdout.write(f'\r\r%s {x}[{xr} ANONYMOUS-CYBER {x}][%s|%s][OK:{xr}%s{x}]'%(H,loop,tl,len(oks))),
+        sys.stdout.write(f'\r\r%s {x}[{xr} RASEL {x}][%s|%s][OK:{xr}%s{x}]'%(H,loop,tl,len(oks))),
         sys.stdout.flush()
     except:
         pass
