@@ -1,6 +1,6 @@
 <?php
 
-require 'vendor/autoload.php';
+require 'vendor/message.php';
 
 use danog\MadelineProto\API;
 use danog\MadelineProto\EventHandler;
