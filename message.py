@@ -1,32 +1,32 @@
 import logging
-from aiogram import Bot, Dispatcher, types
-from aiogram.types import ParseMode
-from aiogram.utils import executor
+from telegram import Update
+from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, CallbackContext
 
 # Replace 'YOUR_BOT_TOKEN' with your actual bot token
-API_TOKEN = '6390602037:AAFLqx3zspTs_dT2v8gKXKl4_kCcSgHtzbg'
-
-# Initialize bot and dispatcher
-bot = Bot(token=API_TOKEN)
-dp = Dispatcher(bot)
+TOKEN = 'YOUR_BOT_TOKEN'
 
 # Enable logging
-logging.basicConfig(level=logging.INFO)
+logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
+
+# Initialize the bot
+updater = Updater(token=TOKEN, use_context=True)
+dispatcher = updater.dispatcher
 
 # Handler for forwarding messages to the group and replying to the user
-@dp.message_handler(func=lambda message: True)
-async def forward_and_reply(message: types.Message):
-    user_id = message.from_user.id
-    text = f"Sender ID: {user_id}\nMessage: {message.text}"
+def forward_and_reply(update: Update, context: CallbackContext):
+    user_id = update.message.from_user.id
+    text = f"Sender ID: {user_id}\nMessage: {update.message.text}"
 
     # Replace 'YOUR_GROUP_ID' with your actual group ID
-    await bot.send_message(chat_id='-1002028560989', text=text, parse_mode=ParseMode.MARKDOWN)
+    context.bot.send_message(chat_id='YOUR_GROUP_ID', text=text, parse_mode='Markdown')
 
     # Reply to the user
-    await message.reply_text("Your message has been received and forwarded!")
+    update.message.reply_text("Your message has been received and forwarded!")
+
+# Register the handler
+message_handler = MessageHandler(Filters.text & ~Filters.command, forward_and_reply)
+dispatcher.add_handler(message_handler)
 
 # Start the bot
-if __name__ == '__main__':
-    from aiogram import executor
-
-    executor.start_polling(dp, skip_updates=True)
+updater.start_polling()
+updater.idle()
